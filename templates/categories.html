@@ -1,0 +1,146 @@
+
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>M&m's Categories</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="https://charan-31094.github.io/mohan/asset/img/favicon.ico">
+
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/owl.carousel.min.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/flaticon.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/slicknav.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/animate.min.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/magnific-popup.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/themify-icons.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/slick.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/nice-select.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/style.css">
+<body>
+
+
+
+<header>
+
+<div class="header-area">
+<div class="main-header header-sticky">
+<div class="container-fluid">
+<div class="menu-wrapper">
+
+<div class="logo">
+<a href="/"><img src="https://charan-31094.github.io/mohan/mm.png" alt=""></a>
+</div>
+
+<div class="main-menu d-none d-lg-block">
+<nav>
+<ul id="navigation">
+<li><a href="/">Home</a></li>
+<li><a href="/categories">shop</a></li>
+<li><a href="/about">about</a></li>
+<li class="hot"><a href="#">Products</a>
+<ul class="submenu">
+<li><a href="/categories"> Product list</a></li>
+<li><a href="/spares"> Product Details</a></li>
+</ul>
+</li>
+</li>
+
+  <li><a href="#">Cart</a>
+<ul class="submenu">
+<li><a href="/cart">Cart</a></li>
+ <li><a href="/showpayment">Payments</a> </li>
+</ul>
+</li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+<div class="header-right">
+<ul>
+<li>
+<div class="nav-search search-switch">
+</div>
+</li>
+<li> <a href="/login"><span class="flaticon-user"></span></a></li>
+<li><a href="/cart"><span class="flaticon-shopping-cart"></span></a> </li>
+</ul>
+</div>
+</div>
+
+<div class="col-12">
+<div class="mobile_menu d-block d-lg-none"></div>
+</div>
+</div>
+</div>
+</div>
+
+</header>
+<main>
+
+<div class="slider-area ">
+<div class="single-slider slider-height2 d-flex align-items-center">
+<div class="container">
+<div class="row">
+<div class="col-xl-12">
+<div class="hero-cap text-center">
+<h2>Categories</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="popular-items latest-padding">
+<div class="container">
+<div class="row product-btn justify-content-between mb-40">
+<div class="properties__button">
+</div>
+<div class="grid-list-view">
+</div>
+</div>
+</div>
+<div class="tab-content" id="nav-tabContent">
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<div class="row">
+
+
+
+{% for cat in categories %}
+
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+<div class="single-popular-items mb-50 text-center">
+<div class="popular-img">
+<img src="{{cat.imgurl}}" alt="" height="400px">
+<div class="img-cap">
+<span><a href="./{{cat.cid}}" >View Parts</a></span>
+</div>
+<div class="favorit-items">
+<span class="flaticon-heart"></span>
+</div>
+</div>
+<div class="popular-caption">
+<h3><a href="./{{cat.cid}}">{{cat.name}}</a></h3>
+</div>
+</div>
+</div>
+    {% endfor %}
+
+
+
+
+
+
+</div>
+</section>
+
+
+</main>
+
+</body>
+</html>

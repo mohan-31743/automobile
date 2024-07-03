@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>OTP Verification</h2>
+    <form method="post" action="{% url 'otp_verification' %}">
+        {% csrf_token %}
+        <label for="otp">Enter OTP:</label><br>
+        <input type="text" name="otp" id="otp" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

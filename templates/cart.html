@@ -1,0 +1,283 @@
+
+
+
+<!doctype html>
+<html lang="zxx">
+<head>
+<meta charset="utf-8">
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AaVtvnf7xmyD21XNNlGdROavvkIx5hBVbW2sw5JLJiqfvwT8MyBaii3aMRa-FGF4D_kTLhdijfDX1k_d"></script>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>M&m's Garage</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="https://charan-31094.github.io/mohan/asset/img/favicon.ico">
+
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/owl.carousel.min.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/flaticon.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/slicknav.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/animate.min.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/magnific-popup.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/themify-icons.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/slick.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/nice-select.css">
+<link rel="stylesheet" href="https://charan-31094.github.io/mohan/asset/css/style.css">
+<body>
+<header>
+
+<div class="header-area">
+<div class="main-header header-sticky">
+<div class="container-fluid">
+<div class="menu-wrapper">
+
+<div class="logo">
+<a href="index.html"><img src="https://charan-31094.github.io/mohan/mm.png" alt=""></a>
+</div>
+
+<div class="main-menu d-none d-lg-block"><nav>
+<ul id="navigation">
+<li><a href="/">Home</a></li>
+<li><a href="/categories">shop</a></li>
+<li><a href="/about">about</a></li>
+<li class="hot"><a href="#">Products</a>
+<ul class="submenu">
+<li><a href="/categories"> Product list</a></li>
+<li><a href="/spares"> Product Details</a></li>
+</ul>
+</li>
+</li>
+
+  <li><a href="#">Cart</a>
+<ul class="submenu">
+<li><a href="cart">Cart</a></li>
+ <li><a href="/showpayment">Payments</a> </li>
+</ul>
+</li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+<div class="header-right">
+<ul>
+<li>
+<div class="nav-search search-switch">
+</div>
+</li>
+<li> <a href="/login"><span class="flaticon-user"></span></a></li>
+<li><a href="/cart"><span class="flaticon-shopping-cart"></span></a> </li>
+</ul>
+</div>
+</div>
+
+<div class="col-12">
+<div class="mobile_menu d-block d-lg-none"></div>
+</div>
+</div>
+</div>
+</div>
+
+</header>
+<main>
+
+<div class="slider-area ">
+<div class="single-slider slider-height2 d-flex align-items-center">
+<div class="container">
+<div class="row">
+<div class="col-xl-12">
+<div class="hero-cap text-center">
+<h2>Cart List</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<section class="cart_area section_padding">
+<div class="container">
+<div class="cart_inner">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Product</th>
+<th scope="col">Price</th>
+<th scope="col">Quantity</th>
+<th scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+
+{% for p in products %}
+<tr>
+<td>
+<div class="media">
+<div class="d-flex">
+<img src={{p.imgurl}} alt="" />
+</div>
+<div class="media-body">
+<p>{{p.name}}</p>
+</div>
+</div>
+</td>
+<td>
+<h5>Rs.{{p.price}}</h5>
+</td>
+<td>
+<div class="product_count">
+<span class="input-number-decrement"> <i class="ti-minus"></i></span>
+<input class="input-number" type="text" value="1" min="0" max="10">
+<span class="input-number-increment"> <i class="ti-plus"></i></span>
+</div>
+</td>
+<td>
+<h5>Rs.{{p.price}}</h5>
+</td>
+</tr>
+{% endfor %}
+<tr class="bottom_button">
+<td>
+
+</td>
+
+<td></td>
+<td></td>
+<td>
+<div class="cupon_text float-right">
+<a class="btn_1" href="/deleteallcart">Delete All Products</a>
+    <br><br>        </div>
+       </td>
+</div>
+</td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+        <td>
+<h5>Total No.Of Products</h5>
+</td>
+
+
+<td>
+<h5>{{total_items}}</h5>
+</td>
+</tr>
+
+
+
+<td></td>
+<td></td>
+
+ <td>
+<h5>Subtotal</h5>
+</td>
+<td>
+<h5>Rs.{{total_price}}</h5>
+</td>
+
+
+
+
+
+<tr class="shipping_area">
+<td></td>
+<td></td>
+<td>
+<h5>Payment</h5>
+</td>
+<td>
+<div class="shipping_box">
+<ul class="list">
+
+<li>
+    <h5>Your Wallet Balance : {{wallet}}</h5><br>
+    <form method="post" action="/rwalletpayment">
+        {% csrf_token %}
+        <input type="hidden" name="price" value="{{total_price}}">
+<input  class="genric-btn danger-border e-large  circle arrow" type="submit"  value="Pay With Wallet"><br><br>
+</form>
+    <input class="genric-btn e-large info-border circle arrow" type="button"  value="Pay With Paypal" onclick="pay()"><br><br>
+    <div id="paypal-button-container"></div>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+
+                    <!-- Include the PayPal JavaScript SDK -->
+                    <script
+                        src="https://www.paypal.com/sdk/js?client-id=AaVtvnf7xmyD21XNNlGdROavvkIx5hBVbW2sw5JLJiqfvwT8MyBaii3aMRa-FGF4D_kTLhdijfDX1k_d&currency=USD">
+                    </script>
+
+                    <script>
+                    function pay(){                        // Render the PayPal button into #paypal-button-container
+                        paypal.Buttons({
+
+                            // Set up the transaction
+                            createOrder: function (data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: '{{total_price}}'
+                                        }
+                                    }]
+                                });
+                            },
+
+                            // Finalize the transaction
+                            onApprove: function (data, actions) {
+                                return actions.order.capture().then(function (details) {
+                                  window.location.href='/addpayment/'+details.id+'/'+{{total_price}}
+                                    // Show a success message to the buyer
+
+
+                                });
+                            }
+
+
+                        }).render('#paypal-button-container');}
+                    </script>
+</main>>
+
+
+<div class="search-model-box">
+<div class="h-100 d-flex align-items-center justify-content-center">
+<div class="search-close-btn">+</div>
+<form class="search-model-form">
+<input type="text" id="search-input" placeholder="Searching key.....">
+</form>
+</div>
+</div>
+
+
+<script src="https://charan-31094.github.io/mohan/asset/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/popper.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/bootstrap.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/jquery.slicknav.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/owl.carousel.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/slick.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/wow.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/animated.headline.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/jquery.scrollUp.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/jquery.nice-select.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/jquery.sticky.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/jquery.magnific-popup.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/contact.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/jquery.form.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/jquery.validate.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/mail-script.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/jquery.ajaxchimp.min.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/plugins.js"></script>
+<script src="https://charan-31094.github.io/mohan/asset/js/main.js"></script>
+</body>
+</html>

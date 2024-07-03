@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+        .navbar{
+            background-color: gray;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+
+}
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+}
+
+.row {margin: 0 -5px;}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+img{
+    width: 50px;
+    height: 200px;
+}
+.card img:hover {
+  transform: scale(1.04);
+  }
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.card button:hover {
+  transform: scale(1.04);
+  }
+
+.card button:hover {
+  opacity: 0.7;
+}
+.cc{
+    padding-left: 100px;
+}
+</style>
+</head>
+<body>
+<header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'registration' %}">Registration</a></li>
+                 <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+        </nav>
+    </header><br>
+<h2 style="text-align:center">Spare parts</h2>
+<!--row start-->
+<div class="row">
+
+<!--card start-->
+<div class="cc">
+<div class="column">
+<div class="card">
+  <img src="//banner2.cleanpng.com/20180805/cfi/kisspng-bumper-car-volkswagen-grille-automotive-lighting-protecting-your-volkswagen-vw-genuine-body-parts-5b67b1291fb184.3850419415335222171298.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>BUMPER</h1>
+  <p class="price">RS:1,500</p>
+
+  <p><button>Order Now</button></p>
+</div></div>
+
+
+<!--card end-->
+
+<div class="column">
+<div class="card">
+    <img src=" https://w7.pngwing.com/pngs/921/92/png-transparent-headlamp-car-freightliner-cascadia-ab-volvo-car-truck-headlamp-car-thumbnail.png" alt="Denim Jeans" style="width:100%">
+    <h1>HEAD LIGHT</h1>
+    <p class="price">RS:1,500 </p>
+
+    <p><button>Order Now</button></p>
+  </div></div>
+</div></div>
+
+
+
+
+    <!--card start-->
+    <div class="column">
+    <div class="card">
+      <img src=" https://e7.pngegg.com/pngimages/983/739/png-clipart-car-ballis-autopartes-wing-mirror-rear-view-mirror-car-angle-car.png
+" alt="Denim Jeans" style="width:100%">
+      <h1>MIRROR</h1>
+      <p class="price">RS:2,500</p>
+
+      <p><button>Order Now</button></p>
+    </div></div>
+    <!--card end-->
+
+    <div class="column">
+    <div class="card">
+        <img src="https://www.pngkey.com/png/detail/167-1673493_car-service-engine-repairs-mechanic-piston-png.png" alt="Denim Jeans" style="width:100%">
+        <h1>PISTON</h1>
+        <p class="price">RS:6,999</p>
+
+        <p><button>Order Now</button></p>
+      </div></div></div>
+      <div class="row">
+
+        <!--card start-->
+        <div class="cc">
+        <div class="column">
+        <div class="card">
+          <img src=" https://w7.pngwing.com/pngs/648/1022/png-transparent-car-motor-vehicle-windscreen-wipers-ford-motor-company-porsche-924-car-driving-car-automobile-repair-shop.png
+" alt="Denim Jeans" style="width:100%">
+          <h1>WIPERS</h1>
+          <p class="price">RS:399</p>
+
+          <p><button>Order Now</button></p>
+        </div></div>
+        <!--card end-->
+
+        <div class="column">
+        <div class="card">
+            <img src="https://banner2.cleanpng.com/20171220/aqq/steering-wheel-png-5a3a9d0186df63.19693330151379072155254203.jpg" height="20px" width="20px"alt="Denim Jeans" style="width:100%">
+            <h1>STEERING </h1>
+            <p class="price">RS:999</p>
+
+            <p><button>Order Now</button></p>
+          </div></div>
+        </div></div>
+
+
+
+
+            <!--card start-->
+            <div class="column">
+            <div class="card">
+              <img src=" https://w7.pngwing.com/pngs/516/549/png-transparent-oil-filter-air-filter-car-filtration-synthetic-oil-car-logo-quality-oil.png
+" alt="Denim Jeans" style="width:100%">
+              <h1>OIL FILTER</h1>
+              <p class="price">RS:490 </p>
+
+              <p><button>Order Now</button></p>
+            </div></div>
+            <!--card end-->
+
+            <div class="column">
+            <div class="card">
+                <img src="https://w7.pngwing.com/pngs/260/445/png-transparent-automotive-engine-parts-automotive-engine-parts-car-parts-auto-parts.png" alt="Denim Jeans" style="width:100%">
+                <h1>ALTERNATOR</h1>
+                <p class="price">RS:12,000 </p>
+
+                <p><button>Order Now</button></p>
+              </div></div>
+
+
+              <div class="row">
+
+                <!--card start-->
+                <div class="cc">
+                <div class="column">
+                <div class="card">
+                  <img src="https://e7.pngegg.com/pngimages/190/156/png-clipart-yellow-and-gray-air-intake-filter-compressed-air-filters-car-oil-filter-k-n-engineering-engine-parts-motorcycle-engineer-thumbnail.png" alt="Denim Jeans" style="width:100%">
+                  <h1>AIR FILTER</h1>
+                  <p class="price">RS:799 </p>
+
+                  <p><button>Order Now</button></p>
+                </div></div>
+                <!--card end-->
+
+                <div class="column">
+                <div class="card">
+                    <img src="https://w7.pngwing.com/pngs/374/968/png-transparent-car-automotive-battery-robert-bosch-gmbh-vrla-battery-automotive-battery-vehicle-auto-part-startstop-system-thumbnail.png" alt="Denim Jeans" style="width:100%">
+                    <h1>BATTERY</h1>
+                    <p class="price">RS:2,990 </p>
+
+                    <p><button>Order Now</button></p>
+                  </div></div>
+                </div></div>
+
+
+
+
+                    <!--card start-->
+                    <div class="column">
+                    <div class="card">
+                      <img src="https://png.pngtree.com/element_pic/00/16/07/035778be920803a.jpg" alt="Denim Jeans" style="width:100%">
+                      <h1>WHEELS</h1>
+                      <p class="price">RS:3,000 </p>
+
+                      <p><button>Order Now</button></p>
+                    </div></div>
+                    <!--card end-->
+
+                    <div class="column">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/originals/04/57/57/0457572dcc481fc91a675c9b37028e1e.png" alt="Denim Jeans" style="width:100%">
+                        <h1>ENGINE</h1>
+                        <p class="price">RS:1,00,000 </p>
+
+                        <p><button>Order Now</button></p>
+                      </div></div>
+
+
+</body>
+</html>

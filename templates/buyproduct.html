@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Form</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		label {
+			font-size: 20px;
+			margin-top: 20px;
+			display: block;
+			width: 100%;
+			text-align: left;
+		}
+		input[type="text"], input[type="number"] {
+			width: 100%;
+			height: 40px;
+			margin-top: 10px;
+			border-radius: 5px;
+			border: none;
+			padding: 10px;
+			font-size: 18px;
+		}
+		textarea {
+			width: 100%;
+			height: 120px;
+			margin-top: 10px;
+			border-radius: 5px;
+			border: none;
+			padding: 10px;
+			font-size: 18px;
+		}
+		button[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+		h1 {
+			font-size: 36px;
+			text-align: center;
+			margin-top: 50px;
+		}
+		img {
+			width: 400px;
+			height: 400px;
+			object-fit: cover;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Order Form</h1>
+	<form action="#" method="post">
+		<img src="your-image.jpg" alt="Product Image">
+		<label for="item-name">Item Name:</label>
+		<input type="text" id="item-name" name="item-name" required>
+		<label for="item-description">Item Description:</label>
+		<textarea id="item-description" name="item-description" required></textarea>
+		<label for="number-of-items">Number of Items Sold:</label>
+		<input type="number" id="number-of-items" name="number-of-items" required>
+		<label for="price-per-unit">Price per Unit (INR):</label>
+		<input type="text" id="price-per-unit" name="price-per-unit" required>
+		<button type="submit">Place Order</button>
+	</form>
+</body>
+</html>

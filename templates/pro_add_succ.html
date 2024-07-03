@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item Added</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .container {
+            padding: 2px 16px;
+        }
+        .checkmark {
+            color: limegreen;
+            font-size: 48px;
+            animation: checkmark 1s ease-in-out;
+        }
+        @keyframes checkmark {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 align="center" style="font-weight: bold;">Item Added</h2>
+
+<div class="card">
+    <div class="container">
+        <span class="checkmark">&#10004;</span>
+        <h4><b>Item added successfully</b></h4>
+        <button  onclick="location.href='/createprod'">Add another</button>
+        <button  onclick="location.href='/spares'">Return to products page</button>
+    </div>
+</div>
+
+</body>
+</html>

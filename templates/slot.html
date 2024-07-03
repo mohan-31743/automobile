@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+ body{
+    background-color: #121212;
+    color:white;
+}
+    .app-time {
+  border: 1px solid #fff;
+  padding: 20px 30px;
+  box-shadow: 2px 4px 10px 0px #c7cacce3;
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: 40px;
+  height: 20px;
+  width: 20px;
+  transition: all 0.15s ease-out 0s;
+  background: #fff;
+  border: 1px solid #999;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #e5e7eb;
+}
+.option-input:checked {
+  border: 1px solid #fff;
+}
+.option-input:checked::before {
+  color: lightgreen;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: "✔";
+  display: inline-block;
+  font-size: 12px;
+  left: 4px;
+  line-height: 20px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: green;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.option-input.radio {
+  border-radius: 50%;
+  background-color: black;
+    color:white;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+.app-check {
+  display: flex;
+}
+.app-border {
+  border: 1px solid #ece9e9;
+  border-radius: 7px;
+  padding: 5px 7px 5px 9px;
+  padding-left: 40px;
+  min-height: 30px;
+}
+
+.option-input.radio:checked + .app-border {
+  background: lightgreen;
+}
+.option-input.radio:,
+.option-input.radio: + .app-border {
+  cursor: not-allowed;
+  opacity: 0.6;
+
+}
+.app-label {
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+}
+
+        .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+button{
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: lightgreen;
+    color: black;
+}
+.divc{
+    align-items: center;
+    align-content: center;
+}
+
+  </style>
+</head>
+<body>
+<header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'registration' %}">Registration</a></li>
+                 <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 align="center">Book Slot</h1>
+<div class="app-time">
+  <div>
+    <p align="center">Timings</p>
+    <p align="center">9:00AM to 12:00PM</p><br>
+    <div class="app-check">
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">9:00 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio"  name="example" />
+      <div class="app-border">
+
+        <label class="app-label">9:30 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example"  />
+      <div class="app-border">
+
+        <label class="app-label">10:00 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">10:30 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">11:00 AM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example"  />
+      <div class="app-border">
+
+        <label class="app-label">11:30 AM
+        </label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <br><br>
+    <p align="center">Timings</p>
+    <p align="center">1:00PM to 5:00PM</p><br>
+    <div class="app-check">
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">1:00 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example"  />
+      <div class="app-border">
+
+        <label class="app-label">1:30 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">2:00 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example"  />
+      <div class="app-border">
+
+        <label class="app-label">2:30 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">3:00 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example"  />
+      <div class="app-border">
+
+        <label class="app-label">3:30 PM
+        </label>
+      </div>
+      <input type="radio" class="option-input radio" name="example" />
+      <div class="app-border">
+
+        <label class="app-label">4:00 PM
+        </label>
+      </div>
+
+      <input type="radio" class="option-input radio" name="example"  />
+      <div class="app-border">
+
+        <label class="app-label">4:30 PM
+        </label>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div align="center" class="divc">
+  <br>
+  <button  onclick="window.location.href='/home'"> Book Slot</button>
+</div>
+</body>
+</html>

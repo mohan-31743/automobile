@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Connect Plus</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="https://charan-31094.github.io/mohan/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://charan-31094.github.io/mohan/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://charan-31094.github.io/mohan/assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="https://charan-31094.github.io/mohan/assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="https://charan-31094.github.io/mohan/assets/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:https://charan-31094.github.io/mohan/partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="/"><img src="https://charan-31094.github.io/mohan/assets/images/logo.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="/"><img src="https://charan-31094.github.io/mohan/assets/images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <div class="search-field d-none d-xl-block">
+
+
+
+          </div>
+          <ul class="navbar-nav navbar-nav-right">
+
+
+
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                  <img src="https://charan-31094.github.io/mohan/assets/images/faces/face28.png" alt="image">
+                </div>
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">{{users}}</p>
+                </div>
+              </a>
+              <div class="dropdown-menu navbar-dropdown dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="profileDropdown" data-x-placement="bottom-end">
+                <div class="p-3 text-center bg-primary">
+                  <img class="img-avatar img-avatar48 img-avatar-thumb" src="https://charan-31094.github.io/mohan/assets/images/faces/face28.png" alt="">
+                </div>
+                <div class="p-2">
+                  <h5 class="dropdown-header text-uppercase pl-2 text-dark">User Options</h5>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
+                    <span>Inbox</span>
+                    <span class="p-0">
+                      <span class="badge badge-primary">3</span>
+                      <i class="mdi mdi-email-open-outline ml-1"></i>
+                    </span>
+                  </a>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
+                    <span>Profile</span>
+                    <span class="p-0">
+                      <span class="badge badge-success">1</span>
+                      <i class="mdi mdi-account-outline ml-1"></i>
+                    </span>
+                  </a>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                    <span>Settings</span>
+                    <i class="mdi mdi-settings"></i>
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <h5 class="dropdown-header text-uppercase  pl-2 text-dark mt-2">Actions</h5>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
+                    <span>Lock Account</span>
+                    <i class="mdi mdi-lock ml-1"></i>
+                  </a>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
+                    <span>Log Out</span>
+                    <i class="mdi mdi-logout ml-1"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:/partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-category">Admin</li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="/createprod">
+                <span class="icon-bg"><i class="mdi mdi-format-list-bulleted menu-icon"></i></span>
+                <span class="menu-title">Add new Products</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <span class="icon-bg"><i class="mdi mdi-chart-bar menu-icon"></i></span>
+                <span class="menu-title">Users</span>
+              </a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/viewproducts">
+                <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
+                <span class="menu-title">Products</span>
+              </a>
+            </li>
+
+            <li class="nav-item documentation-link">
+              <a class="nav-link" href="/logout" >
+                <span class="icon-bg">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                </span>
+                <span class="menu-title">Logout</span>
+              </a>
+            </li>
+            <li class="nav-item sidebar-user-actions">
+              <div class="user-details">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="d-flex align-items-center">
+                      <div class="sidebar-profile-img">
+                        <img src="https://charan-31094.github.io/mohan/assets/images/faces/face28.png" alt="image">
+                      </div>
+                      <div class="sidebar-profile-text">
+                        <p class="mb-1">{{users}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> All Products </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Categories</h4>
+                    <p class="card-description">
+                    </p>
+                    <table class="table">
+                      <thead>
+
+                        <tr>
+                          <th>Cat ID</th>
+                          <th>Name</th>
+                          <th>Created at</th>
+                          <th>Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for p in cat %}
+                        <tr>
+                          <td>{{p.cid}}</td>
+                          <td>{{p.name}}</td>
+                          <td>{{p.created_at}}</td>
+                          <td> <button  onclick="window.location.href='deletecat/{{p.cid}}'" type="button" class="btn btn-outline-danger btn-sm ">C{{p.cid}}</button></td>
+
+
+                        </tr>
+                        {% endfor %}
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Products</h4>
+                    </p>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Product ID</th>
+                          <th>Cat ID</th>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>Delete Product</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for p in prod %}
+                        <tr>
+                          <td>{{p.pid}}</td>
+                          <td>{{p.cid}}</td>
+                          <td>{{p.name}}</td>
+                          <td>{{p.price}}</td>
+                          <td> <button  onclick="window.location.href='deleteprod/{{p.pid}}'" type="button" class="btn btn-outline-danger btn-sm ">P{{p.pid}}</button></td>
+
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              </div>
+            </div>
+          </div> </div>
+        </div>
+      </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:https://charan-31094.github.io/mohan/partials/_footer.html -->
+          <footer class="footer">
+            <div class="footer-inner-wraper">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              </div>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="https://charan-31094.github.io/mohan/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="https://charan-31094.github.io/mohan/assets/js/off-canvas.js"></script>
+    <script src="https://charan-31094.github.io/mohan/assets/js/hoverable-collapse.js"></script>
+    <script src="https://charan-31094.github.io/mohan/assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <!-- End custom js for this page -->
+  </body>
+</html>

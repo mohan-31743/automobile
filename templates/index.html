@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<style>
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+<br>
+
+ <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}"><img src=""></a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'registration' %}">Registration</a></li>
+                 <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br><br><br>
+
+<div class="alignRow">
+<div class="imageColumn">
+  <img src="{% static 'images/frontend.png' %}" alt="img4" style="width:100%">
+</div>
+<div class="imageColumn">
+
+  <img src="{% static 'images/django.png' %}" alt="img4" style="width:100%">
+</div>
+<div class="imageColumn">
+  <img src="{% static 'images/mongodb.png' %}" alt="img4" style="width:100%">
+</div>
+<div class="imageColumn">
+
+<img src="{% static 'images/mysql.png' %}" alt="img4" style="width:100%">
+
+</div>
+</div>
+
+</body>
+</html>
